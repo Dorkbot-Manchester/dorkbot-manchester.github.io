@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import sys
 import re
 import codecs
@@ -7,7 +7,7 @@ from textwrap import TextWrapper
 import autolink
 
 for post in sys.argv[1:]:
-    print "Autoformatting %s..." % post
+    print("Autoformatting %s..." % post)
 
     with codecs.open(post, 'r', 'utf-8') as f:
         content = f.read()
