@@ -3,3 +3,4 @@ description: Dorkbot Manchester
 markdown: rdiscount
 permalink: /:title/
 future: true
+theme: jekyll-theme-hacker
