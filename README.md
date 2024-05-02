@@ -1,5 +1,7 @@
-Dorkbotlondon
+Dorkbotmcr
 ===================
+
+Kindly forked from Dorkbotlondon.
 
 How to add Dorkbot events
 --------------------------------------------------------

@@ -1,5 +1,5 @@
-name: Dorkbot London
-description: Dorkbot London
+name: Dorkbot Manchester
+description: Dorkbot Manchester
 markdown: rdiscount
 permalink: /:title/
 future: true
