@@ -13,6 +13,22 @@ soda:
         == By Tram: ==
         SODA is a 17 minute walk from St Peters Square Tram Stop
 
+council_chambers:
+    where:
+        Council Chambers, Steve Biko Building (upstairs in Academy), Oxford Road
+    where_html: |
+        Council Chambers, Steve Biko Building (upstairs in Academy), Oxford Road
+    directions: |
+
+kings_arms_salford:
+    where:
+        Kings Arms Pub, 11 Bloom St, Salford, M3 6AN
+    where_html: |
+        Kings Arms Pub, 11 Bloom St, Salford, M3 6AN
+    directions: |
+
+
+
 the_internet:
     where:
         The Internet
