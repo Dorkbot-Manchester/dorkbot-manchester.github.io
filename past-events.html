@@ -1,0 +1,14 @@
+---
+layout: page
+title: Past Events
+permalink: /past-events/
+---
+
+<section>
+
+        {% for post in site.posts %}
+            <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot #{{ post.title }}</a> - 
+            <i class="icon-clock"></i> <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></p>  
+    {% endfor %}
+    </table>
+</section>

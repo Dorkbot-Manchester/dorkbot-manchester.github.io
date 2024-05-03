@@ -1,8 +1,10 @@
 name: Dorkbot Manchester
+title: Dorkbot Manchester
 description: Dorkbot Manchester
-markdown: rdiscount
+markdown: kramdown
 permalink: /:title/
 future: true
-remote_theme: pages-themes/hacker@v0.2.0
+#remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: pages-themes/cayman
 plugins:
-- jekyll-remote-theme
+  - jekyll-remote-theme
