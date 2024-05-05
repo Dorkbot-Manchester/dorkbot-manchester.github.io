@@ -4,7 +4,8 @@ name: Rebuild
 
 on:
   schedule:
-    - cron:  '0 6 * * *' # Runs every day at 6am
+    - cron:  '* * * * *' # Runs every day at 6am
+    #- cron:  '0 6 * * *' # Runs every day at 6am
 
 jobs:
   refresh:
