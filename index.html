@@ -3,17 +3,26 @@ layout: default
 title: Dorkbot Manchester
 ---
 {% assign curDate = site.time | date: '%s' %}
-{% assign latestEvent = site.posts.first %}
-{% assign latestEventStartDate = post.date | date: '%s' %}
-{% if latestEventStartDate >= curDate %}
-<h2>Next Event</h2>
-    {% assign post = latestEvent %}
-    {% assign content = post.content %}
-    {% include post.html %}
+{% assign sortedPosts = site.posts | sort | reverse %}
+{% for event in sortedPosts %}
+{% assign eventStartDate = event.date | date: '%s' %}
+{% if eventStartDate >= curDate %}
+{% assign nextEvent = event %}
+{% endif %}
+{% endfor %}
+
+{% if nextEvent %}
+<h2>Dorkbot #{{ nextEvent.number }}</h2>
+{% if nextEvent.start %}<dt>When:</dt> <dd>{{ nextEvent.start | date:"%H:%M" }}-{{ nextEvent.end | date:"%H:%M" }}, {{ nextEvent.start | date:"%a %b %-d %Y" }}</dd></p>{% endif %}
+{% if nextEvent.where %}<dt>Where:</dt><dd>{{ site.data.locations.[nextEvent.where].where_html }} (directions below)</dd>{% endif %}
+</dl>
+{{ nextEvent.content }}
+{{ site.data.locations.[nextEvent.where].directions }}
 {% else %}
 <h2>Next Event</h2>
 <p> Our next event has not been announced yet. Please check back soon.  </p>
 
+{% assign latestEvent = site.posts.first %}
 <p>Our last event was <a href="{{ latestEvent.url }}">Dorkbot #{{ latestEvent.title }}</a> and took place on {{ latestEvent.date | date: "%-d %B %Y" }}.
 </p>
 

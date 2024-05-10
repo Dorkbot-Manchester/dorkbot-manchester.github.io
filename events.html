@@ -1,0 +1,30 @@
+---
+layout: page
+title: All Events
+permalink: /events/
+---
+
+{% assign curDate = site.time | date: '%s' %}
+    {% assign latestPostDate = site.posts.first.date | date: '%s' %}
+
+    {%if latestPostDate >= curDate %}
+<h3>Upcoming</h3>
+    {% for post in site.posts %}
+    {% assign postDate = post.date | date: '%s' %}
+    {% if postDate >= curDate %}
+    <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot #{{ post.title }}</a> - 
+    <i class="icon-clock"></i> <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></p>  
+    {% endif %}
+    {% endfor %}
+    </p>
+{%endif%}
+
+<h3>Past</h3>
+    {% for post in site.posts %}
+    {% assign postDate = post.date | date: '%s' %}
+    {% if postDate <= curDate %}
+    <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot #{{ post.title }}</a> - 
+    <i class="icon-clock"></i> <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></p>  
+    {% endif %}
+    {% endfor %}
+    </p>

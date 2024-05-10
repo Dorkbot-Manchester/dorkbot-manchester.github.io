@@ -5,7 +5,7 @@ Kindly forked from Dorkbotlondon.
 
 How to add Dorkbot events
 --------------------------------------------------------
-This website is generted by jekyll, and automatically builds when someone (maybe you!) pushes a new version to github.
+This website is generted by jekyll, and automatically builds when someone (maybe you!) pushes a new version to GitHub.
 
 The entries for each Dorkbot live in the _posts directory, and are named as YEAR-MONTH-DAY-DORKBOTNUMBER.html.
 
@@ -17,16 +17,20 @@ At the top of each file you find a section of metadata, the only things you need
 * `tags`. This should be a list of all the people who spoke at this dorkbot.
 * Optionally, `title`. This is used for named events such as Dorkboat.
 
-Below the --- line, you can put whatever you like, it'll be inside a `<pre>` tag on the website, but you can use html tags and other fancy things.
+Below the --- line, you can put whatever you like! 
 
-If you want to preview the website after you've added a new event or changed an old one, run `jekyll serve` (assuming you have it installed) and it'll give you a webserver address to visit.
-
-When you're done, `git add`, `git commit` and `git push` the changes [hello this is Dave Green - if you don't already have git set up on your local machine etc, you may find it easier to just edit the text files on the Github site, then when you save/"commit changes" the site seems to update itself within a few min automatically...]
+When you're done, `git add`, `git commit` and `git push` the changes .
 
 Adding new locations
 -----------------------------------------
 Look in the `_data/locations.yaml` file, it should be somewhat obvious.
 
-Handy scripts
+
+Development
 -----------------------------------------
-If you look in `/scripts/` there's a little program called `autoformat.py`. If you feed this one or more filenames in the style `./scripts/autoformat.py file1.txt file2.txt` it will take the raw text, wrap it nicely and sort out all the links. It's not perfect, but it's tremendously useful when importing old posts from the mailing list.
+The site is rebuilt daily using GitHub Actions.
+
+If you have Ruby, you can run `bundle install` and then this command to run the site locally:
+```
+bundle exec jekyll serve --incremental
+```
