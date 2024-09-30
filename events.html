@@ -5,10 +5,10 @@ permalink: /events/
 ---
 
 {% assign curDate = site.time | date: '%s' %}
-    {% assign latestPostDate = site.posts.first.date | date: '%s' %}
+{% assign latestPostDate = site.posts.first.date | date: '%s' %}
 
-    {%if latestPostDate >= curDate %}
-<h3>Upcoming</h3>
+{%if latestPostDate >= curDate %}
+    <h3>Upcoming</h3>
     {% for post in site.posts %}
     {% assign postDate = post.date | date: '%s' %}
     {% if postDate >= curDate %}

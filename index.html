@@ -14,10 +14,10 @@ title: Dorkbot Manchester
 {% if nextEvent %}
 <h2>Dorkbot #{{ nextEvent.number }}</h2>
 {% if nextEvent.start %}<dt>When:</dt> <dd>{{ nextEvent.start | date:"%H:%M" }}-{{ nextEvent.end | date:"%H:%M" }}, {{ nextEvent.start | date:"%a %b %-d %Y" }}</dd></p>{% endif %}
-{% if nextEvent.where %}<dt>Where:</dt><dd>{{ site.data.locations.[nextEvent.where].where_html }} (directions below)</dd>{% endif %}
+{% if nextEvent.where %}<dt>Where:</dt><dd>{{ site.data.locations[nextEvent.where].where_html }} (directions below)</dd>{% endif %}
 </dl>
 {{ nextEvent.content }}
-{{ site.data.locations.[nextEvent.where].directions }}
+{{ site.data.locations[nextEvent.where].directions }}
 {% else %}
 <h2>Next Event</h2>
 <p> Our next event has not been announced yet. Please check back soon.  </p>

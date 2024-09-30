@@ -9,10 +9,10 @@ layout: default
 
 <dl>
 {% if post.start %}<dt>When:</dt> <dd>{{ post.start | date:"%H:%M" }}-{{ post.end | date:"%H:%M" }}, {{ post.start | date:"%a %b %-d %Y" }}</dd></p>{% endif %}
-{% if post.where %}<dt>Where:</dt><dd>{{ site.data.locations.[post.where].where_html }} (directions below)</dd>{% endif %}
+{% if post.where %}<dt>Where:</dt><dd>{{ site.data.locations[post.where].where_html }} (directions below)</dd>{% endif %}
 </dl>
 {{ post.content }}
-{{ site.data.locations.[post.where].directions }}
+{{ site.data.locations[post.where].directions }}
 
 
 <div id="paginator">
