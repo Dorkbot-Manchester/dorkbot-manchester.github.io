@@ -11,9 +11,9 @@ $header-bg-color: #282827;
 $header-bg-color-secondary: #282827;
 
 // Text
-$section-headings-color: #f7bb05;
+$section-headings-color: #b5e853;
 $body-text-color: #dadace;
-$body-link-color: #f7bb05;
+$body-link-color: #63c0f5;
 $blockquote-text-color: #819198 !default;
 
 // Code
@@ -21,37 +21,25 @@ $code-bg-color: #3f3f3e;
 $code-text-color: #fafaf3;
 
 // Borders
-$border-color: #dce6f0 !default;
+$border-color: $section-headings-color !default;
 $table-border-color: #e9ebec !default;
 $hr-border-color: #eff0f1 !default;
 
-body {
-    background-color: #1d1d1c;
-}
 
 @import 'jekyll-theme-cayman';
-.project-name {
-    color: #f7bb05;
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    @include large {
-        font-size: 4.25rem;
-      }
-    
-      @include medium {
-        font-size: 3.25rem;
-      }
-    
-      @include small {
-        font-size: 1.75rem;
-      }
+
+body {
+    background-color: #1d1d1c;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 .page-header {
+    position: relative;
     color: $header-heading-color;
-    text-align: center;
+    text-align: left;
     background-color: $header-bg-color;
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+    overflow: hidden;
   
     @include large {
       padding: 2rem 3rem;
@@ -72,4 +60,42 @@ body {
 
 #paginator {
   text-align: center;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px dashed $border-color;
+  color: $border-color;
+}
+
+.site-footer {
+  border-top: 1px dashed $border-color
+}
+
+pre.ascii-art {
+  display: inline-block;
+  font-size: 80%;
+  line-height:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.nav {
+  display: block;
+}
+
+img.mascot {
+  position: absolute;
+  height: 300%;
+  right: -15%;
+  opacity: 50%;
+  top: -70%;
+  @include medium {
+    opacity: 20%;
+    }
+
+  @include small {
+    visibility: hidden;
+  }
 }
