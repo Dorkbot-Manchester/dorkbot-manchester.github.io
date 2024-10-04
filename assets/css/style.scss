@@ -79,6 +79,9 @@ pre.ascii-art {
   line-height:100%;
   overflow: hidden;
   margin: 0;
+  @include small {
+    font-size: 50%;
+    }
 }
 
 .nav {
