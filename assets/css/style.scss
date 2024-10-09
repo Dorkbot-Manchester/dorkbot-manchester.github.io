@@ -73,15 +73,20 @@ hr {
   border-top: 1px dashed $border-color
 }
 
-pre.ascii-art {
+.ascii-art pre {
   display: inline-block;
   font-size: 80%;
   line-height:100%;
   overflow: hidden;
   margin: 0;
+  color: $body-text-color;
   @include small {
-    font-size: 40%;
+    font-size: 44%;
     }
+}
+
+.ascii-art a:hover{
+  text-decoration: none;
 }
 
 .nav {
