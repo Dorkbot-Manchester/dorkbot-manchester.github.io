@@ -1,3 +1,11 @@
+grosvenor_east:
+    where:
+        MMU Grosvenor East building, Cavendish Street, Manchester, M15 6BG
+    where_html: |
+        MMU Grosvenor East building, <a href="hhttps://maps.app.goo.gl/wauNcsvNBKacfAhc6">Cavendish Street, Manchester, M15 6BG</a>
+    directions: |
+        <h4>How to get to Grosvenor East</h4> <dl> <dt>By Train</dt> <dd>Grosvenor East is a <a href="https://maps.app.goo.gl/aEPQZif5TRniv3YM9">9 minute walk from Manchester Oxford Road Station</a></dd> <dt>By Tram</dt> <dd>Grosvenor East is a <a href="https://maps.app.goo.gl/6KMZna48YkgRtioM7">15 minute walk from St Peters Square Tram Stop</a></dd> </dl>
+
 soda:
     where:
         SODA (School of Digital Arts), 14 Higher Chatham St, Manchester M15 6ED
@@ -5,6 +13,7 @@ soda:
         SODA (School of Digital Arts), <a href="https://www.google.com/maps?q=SODA%20School%20of%20Digital%20Arts">14 Higher Chatham St, Manchester M15 6ED</a>
     directions: |
         <h4>How to get to SODA</h4> <dl> <dt>By Train</dt> <dd>SODA is a 12 minute walk from Manchester Oxford Road Station</dd> <dt>By Tram</dt> <dd>SODA is a 17 minute walk from St Peters Square Tram Stop</dd> </dl>
+
 
 council_chambers:
     where:
