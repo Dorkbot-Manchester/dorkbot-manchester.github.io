@@ -12,7 +12,7 @@ permalink: /events/
     {% for post in site.posts %}
     {% assign postDate = post.date | date: '%s' %}
     {% if postDate >= curDate %}
-    <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot #{{ post.title }}</a> - 
+    <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot Manchester #{{ post.title }}</a> - 
     <i class="icon-clock"></i> <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></p>  
     {% endif %}
     {% endfor %}
@@ -23,7 +23,7 @@ permalink: /events/
     {% for post in site.posts %}
     {% assign postDate = post.date | date: '%s' %}
     {% if postDate <= curDate %}
-    <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot #{{ post.title }}</a> - 
+    <p><a href="{{site.baseurl}}{{ post.url }}">Dorkbot Manchester #{{ post.title }}</a> - 
     <i class="icon-clock"></i> <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></p>  
     {% endif %}
     {% endfor %}

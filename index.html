@@ -12,7 +12,7 @@ title: Dorkbot Manchester
 {% endfor %}
 
 {% if nextEvent %}
-<h2>Dorkbot #{{ nextEvent.number }}</h2>
+<h2>Dorkbot Manchester #{{ nextEvent.number }}</h2>
 {% if nextEvent.start %}<dt>When:</dt> <dd>{{ nextEvent.start | date:"%H:%M" }}-{{ nextEvent.end | date:"%H:%M" }}, {{ nextEvent.start | date:"%a %b %-d %Y" }}</dd></p>{% endif %}
 {% if nextEvent.where %}<dt>Where:</dt><dd>{{ site.data.locations[nextEvent.where].where_html }} (directions below)</dd>{% endif %}
 </dl>
@@ -23,7 +23,7 @@ title: Dorkbot Manchester
 <p> Our next event has not been announced yet. Please check back soon.  </p>
 
 {% assign latestEvent = site.posts.first %}
-<p>Our last event was <a href="{{ latestEvent.url }}">Dorkbot #{{ latestEvent.title }}</a> and took place on {{ latestEvent.date | date: "%-d %B %Y" }}.
+<p>Our last event was <a href="{{ latestEvent.url }}">Dorkbot Manchester #{{ latestEvent.title }}</a> and took place on {{ latestEvent.date | date: "%-d %B %Y" }}.
 </p>
 
 {% endif %}
