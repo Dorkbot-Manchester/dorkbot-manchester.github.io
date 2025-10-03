@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorkbot Manchester Poster Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Left Column - Form -->
+            <div class="col-md-5 p-4" style="overflow-y: auto; max-height: 100vh;">
+                <h3>Dorkbot Manchester Poster</h3>
+                <form>
+                    <!-- Image Upload Section -->
+                    <h5 class="mt-3">Hero Image</h5>
+                    <div class="mb-3">
+                        <label for="hero-image-upload" class="form-label">Upload Image</label>
+                        <input type="file" class="form-control" id="hero-image-upload" accept="image/*">
+                        <small class="form-text text-muted">Recommended: 2003x1320px or similar aspect ratio</small>
+                    </div>
+
+                    <!-- Colors Section -->
+                    <h5 class="mt-3">Colors</h5>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="accent-color-1" class="form-label">Accent Color 1 (Logo & Callouts)</label>
+                            <input type="color" class="form-control form-control-color" id="accent-color-1" value="#000000">
+                        </div>
+                        <div class="col-6">
+                            <label for="accent-color-2" class="form-label">Accent Color 2 (Edition Number)</label>
+                            <input type="color" class="form-control form-control-color" id="accent-color-2" value="#ab4d22">
+                        </div>
+                    </div>
+
+                    <!-- Details Section -->
+                    <h5 class="mt-3">Event Details</h5>
+                    <div class="mb-3">
+                        <label for="edition-number" class="form-label">Edition Number</label>
+                        <input type="text" class="form-control" id="edition-number" placeholder="Loading...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="event-details" class="form-label">Date, Time & Venue</label>
+                        <textarea class="form-control" id="event-details" rows="12" placeholder="Loading..."></textarea>
+                        <small class="form-text text-muted">Each line becomes a separate text element</small>
+                    </div>
+
+                    <!-- Talks Section -->
+                    <h5 class="mt-4">Talks</h5>
+                    <div id="talks-container"></div>
+                    <button type="button" class="btn btn-sm btn-success mb-3" onclick="addTalk()">+ Add Talk</button>
+
+                    <div class="mb-3">
+                        <label for="talks-footer" class="form-label">Talks Footer Text</label>
+                        <input type="text" class="form-control" id="talks-footer" placeholder="Loading...">
+                    </div>
+
+                    <!-- Demos Section -->
+                    <h5 class="mt-4">Demos</h5>
+                    <div id="demos-container"></div>
+                    <button type="button" class="btn btn-sm btn-success mb-3" onclick="addDemo()">+ Add Demo</button>
+
+                    <div class="mb-3">
+                        <label for="demos-footer" class="form-label">Demos Footer Text</label>
+                        <input type="text" class="form-control" id="demos-footer" placeholder="Loading...">
+                    </div>
+
+                    <div class="d-flex gap-2 mb-3">
+                        <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
+                        <button type="button" class="btn btn-success" onclick="exportToPDF()">Export PDF</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column - SVG -->
+            <div class="col-md-7 p-4 d-flex align-items-center justify-content-center">
+                <div id="svg-container" style="max-height: 100%; max-width: 100%; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <!-- SVG will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="svg2pdf.umd.min.js"></script>
+    <script src="dorkbot-script.js"></script>
+</body>
+</html>
