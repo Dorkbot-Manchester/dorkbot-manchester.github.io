@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Chicago';
+    src: url('fonts/Chicagoflf-2OEe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Perfect DOS VGA 437';
+    src: url('fonts/Perfect DOS VGA 437.ttf') format('truetype');
+}
+
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
